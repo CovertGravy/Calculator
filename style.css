@@ -1,0 +1,49 @@
+body{
+    background-color: #8EA604;
+}
+
+.text{
+    padding: 2px;
+    color: #34252f;
+    margin: 4px;
+}
+
+h3{
+    box-shadow: 1px 1px 4px 1px #34252f;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.buttons{
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 1px #34252f;
+    
+}
+
+.btn{
+    padding-top: 10px;
+    padding-left: 6px;
+}
+
+#input1, #input2{
+    padding: 1px;
+    margin-left: 6px;
+}
+
+
+#add{background-color: green;}
+#subtract{background-color: maroon;}
+#multiply{background-color: orange;}
+#divide{background-color: lightblue;}
+
+.calc{
+    border: 1px solid #34252f;
+    margin: auto;
+    width: 240px;
+    height: 200px;
+
+    box-shadow: 6px 5px 12px 0px #34252f;
+}
+
