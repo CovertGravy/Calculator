@@ -1,0 +1,140 @@
+body {
+  background-color: #2d313a;
+  font-family: "Orbitron";
+}
+
+.container {
+  width: 380px;
+  height: 460px;
+  margin: auto;
+  box-shadow: inset 0 0 8px 1px black;
+  background-color: #1b1816;
+}
+
+.calc {
+  position: absolute;
+  width: 360px;
+  height: 440px;
+  padding: 10px;
+  box-shadow: inset 0 0 3px 1px black;
+}
+
+.display {
+  width: 340px;
+  height: 40px;
+  padding: 10px;
+  box-shadow: inset 0 0 1px 3px black;
+  font-size: 36px;
+  background-color: #70e9d1cc;
+}
+
+#display {
+  display: inline-block;
+  margin: 0;
+  line-height: 1em;
+}
+
+span#clear {
+  float: right;
+  cursor: pointer;
+  margin-right: 19px;
+  line-height: 1em;
+}
+
+.btns {
+  width: 60px;
+  height: 60px;
+  box-shadow: 1px 1px 1px 0px black;
+  text-align: center;
+  line-height: 60px;
+  background-color: #859c01;
+  border-radius: 50%;
+  font-size: 34px;
+  text-shadow: -1px 0px 1px black;
+  cursor: pointer;
+}
+
+.operator {
+  border-radius: 50%;
+  font-size: 3em;
+  text-shadow: none;
+  line-height: 1.1em;
+}
+
+.r1:hover,
+.r2:hover,
+.r3:hover,
+.r4:hover {
+  background-color: #768905;
+}
+
+.r1:active,
+.r2:active,
+.r3:active,
+.r4:active {
+  background-color: #c1e208;
+  box-shadow: 1px 1px 1px 0px transparent;
+}
+
+.r1,
+.r2,
+.r3,
+.r4 {
+  margin-top: 50px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.r1 {
+  top: 80px;
+}
+.r2 {
+  top: 160px;
+}
+.r3 {
+  top: 240px;
+}
+.r4 {
+  top: 320px;
+}
+
+.r1#eight,
+.r2#five,
+.r3#two,
+.r4#zero {
+  left: 100px;
+}
+
+.r1#nine,
+.r2#six,
+.r3#three,
+.r4#dot {
+  left: 190px;
+}
+
+.r1#divide,
+.r2#multiply,
+.r3#subtract,
+.r4#add {
+  left: 290px;
+}
+
+.r1#divide {
+  background-color: rgb(5, 175, 231);
+}
+
+.r2#multiply {
+  background-color: rgb(235, 157, 12);
+}
+
+.r3#subtract {
+  background-color: rgb(226, 11, 11);
+}
+
+.r4#add {
+  background-color: rgb(6, 207, 6);
+}
+
+.r4#equal {
+  background-color: rgba(255, 255, 255, 0.829);
+}
