@@ -9,7 +9,7 @@ let result;
 let operator_clicked = false;
 let current_operator = "";
 
-function get(event) {
+const get = event => {
   if (event.target.classList.contains("operator")) {
     operator(event.target.id);
     operator_clicked = true;
@@ -26,23 +26,13 @@ function get(event) {
     } else {
       alert("enough!!!");
     }
-    // input.length < 10 && !operator_clicked
-    //   ? ((display.innerText += this.innerText),
-    //     (input += event.target.innerText))
-    //   : operator_clicked
-    //     ? ((display.innerText = ""),
-    //       (display.innerText += this.innerText),
-    //       (input += event.target.innerText))
-    //     : alert("enough!!!");
-
-    console.log(event.target.classList.contains("operator"));
     document.body.style.backgroundColor = `rgba(150, ${event.offsetX}, ${
       event.offsetY
     }, 1)`;
   }
-}
+};
 
-function operator(id) {
+const operator = id => {
   const value = input * 1;
   values.push(value);
   console.log(values);
@@ -66,12 +56,11 @@ function operator(id) {
   input = "";
   return result;
   console.log({ result, values });
-}
+};
 
-function reset() {
-  console.log("reset");
+const reset = () => {
   display.innerText = "";
   input = "";
   operator_clicked = false;
   values = [];
-}
+};
