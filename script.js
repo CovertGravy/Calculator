@@ -9,7 +9,7 @@ let result;
 let operator_clicked = false;
 let current_operator = "";
 
-const get = event => {
+function get(event) {
   if (event.target.classList.contains("operator")) {
     operator(event.target.id);
     operator_clicked = true;
@@ -18,9 +18,7 @@ const get = event => {
       display.innerText += this.innerText;
       input += this.innerText;
     } else if (operator_clicked) {
-      display.innerText = "";
-      display.innerText += this.innerText;
-      input = "";
+      display.innerText = this.innerText;
       input = this.innerText;
       operator_clicked = false;
     } else {
@@ -30,11 +28,11 @@ const get = event => {
       event.offsetY
     }, 1)`;
   }
-};
+}
 
-const operator = id => {
+function operator(id) {
   const value = input * 1;
-  values.push(value);
+  input != "" ? values.push(value) : false;
   console.log(values);
 
   result =
@@ -52,15 +50,18 @@ const operator = id => {
 
   current_operator = id === "equal" ? current_operator : id;
   values = result != "" ? [result] : values;
-  setTimeout(() => (display.innerText = values[0].toString()), 100);
+  !isNaN(values[0])
+    ? ((display.innerText = ""),
+      setTimeout(() => (display.innerText = values[0].toString()), 100))
+    : false;
   input = "";
   return result;
   console.log({ result, values });
-};
+}
 
-const reset = () => {
+function reset() {
   display.innerText = "";
   input = "";
   operator_clicked = false;
   values = [];
-};
+}
